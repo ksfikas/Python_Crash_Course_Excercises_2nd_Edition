@@ -2,6 +2,7 @@ import sys, pygame
 from settings import Settings
 from ship import Ship
 
+
 class AlienInvasion:
     """Overall class to manage game assets and behavior."""
 
@@ -13,7 +14,7 @@ class AlienInvasion:
             (self.settings.screen_width, self.settings.screen_height)
         )
         self.ship = Ship(self)
-    
+
     def _check_events(self):
         """Respond to keypresses and mouse events."""
         for event in pygame.event.get():
@@ -31,8 +32,8 @@ class AlienInvasion:
             # Make the most recently drawn screen visible.
             pygame.display.flip()
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     # Make a game instance, and run the game.
     ai = AlienInvasion()
     ai.run_game()
-    
